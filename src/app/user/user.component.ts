@@ -6,6 +6,7 @@ import {MatTooltipModule, TooltipPosition} from '@angular/material/tooltip';
 import { CommonModule } from '@angular/common';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { MatDialog } from '@angular/material/dialog';
+import { User } from '../models/user.class';
 
 
 @Component({
@@ -16,6 +17,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './user.component.scss'
 })
 export class UserComponent implements OnInit{
+  user = new User();
 
   constructor( public dialog: MatDialog){}
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
